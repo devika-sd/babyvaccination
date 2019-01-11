@@ -14,7 +14,7 @@ class babygui implements ActionListener
 {
 JFrame f1;
 JLabel l0;
-Label l1,l2,l3;
+JLabel l1,l2,l3;
 JButton b1,b2;
 JTextField t1;
 JFrame f2;
@@ -39,25 +39,24 @@ ImageIcon im = new ImageIcon("cute_baby2.jpg");
 		l0=new JLabel(im);
 		l0.setBounds(0,0,600,400);
 		f1.add(l0);
-		l1=new Label("baby's date of birth  :");
-		f1.add(l1);
+		l1=new JLabel("baby's date of birth  :");
+		l0.add(l1);
 		l1.setVisible(true);
 		l1.setBounds(140,100,150,20);
 		l1.setBackground(Color.white);
 		t1=new JTextField();
-		f1.add(t1);
+		l0.add(t1);
 		t1.setBounds(290,100,150,20);
-		l2=new Label("today's date  :");
-		f1.add(l2);
+		l2=new JLabel("today's date  :");
+		l0.add(l2);
 		l2.setBounds(400,10,100,20);
-		l3=new Label(str2);
-		f1.add(l3);
+		l3=new JLabel(str2);
+		l0.add(l3);
 		l3.setBounds(500,10,100,20);
 		b1=new JButton("Enter");
-		f1.add(b1);
+		l0.add(b1);
 		b1.setBounds(290,150,80,30);
 		b1.setBackground(Color.lightGray);
-		revalidate();
 		b1.addActionListener(this);
 		
 	}
@@ -137,7 +136,7 @@ ImageIcon im = new ImageIcon("cute_baby2.jpg");
 	
 	public static void main(String args[])
 	{
-		new babygui(); 
+		new babygui();
 	}
 }
 
